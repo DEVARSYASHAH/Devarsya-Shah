@@ -1,0 +1,476 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #dfdfdf;
+  font-family: "Segoe UI", monospace;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   GLOBAL SECTION SYSTEM
+========================= */
+.container,
+.experience-section,
+.projects-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+
+.experience-section,
+.projects-section {
+  padding-top: 0;
+}
+
+/* =========================
+   HERO LAYOUT
+========================= */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.left {
+  flex: 1;
+}
+
+/* =========================
+   TYPEWRITER
+========================= */
+.typewriter {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-bottom: 24px;
+  border-right: 2px solid #9ca3af;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* =========================
+   TEXT STYLING
+========================= */
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: #60a5fa;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+
+.description {
+  color: #a1a1aa;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   ICON SECTION
+========================= */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.icons a,
+.icons button,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #a1a1aa;
+  transition: all 0.25s ease;
+}
+
+.icons svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.8;
+}
+
+.icons a:hover,
+.icons button:hover {
+  color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.location {
+  color: #d4d4d8;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+.right img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+.section-title {
+  font-size: 30px;
+  margin-bottom: 60px;
+  font-family: monospace;
+  opacity: 0.9;
+}
+
+.exp-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 32px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.exp-card:last-child {
+  margin-bottom: 0;
+}
+
+.exp-card:hover {
+  border-color: #2563eb;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.exp-role {
+  color: #60a5fa;
+  margin: 10px 0 6px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.exp-duration {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.exp-card ul {
+  margin-left: 18px;
+  margin-bottom: 24px;
+}
+
+.exp-card li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.exp-button {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #e5e5e5;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.exp-button:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* =========================
+   PROJECTS GRID SECTION
+========================= */
+.projects-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #2563eb;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #9aa4af;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tech-badge {
+  background: #1f2937;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #58a6ff;
+}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.card-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.card-btn.github {
+  border: 1px solid #374151;
+  color: #e6edf3;
+}
+
+.card-btn.github:hover {
+  background: #1f2937;
+  color: white;
+}
+
+.live {
+  background: #2563eb;
+  color: white;
+}
+
+.live:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   🌞 LIGHT MODE
+========================= */
+
+.light-mode {
+  background-color: #f2e7db;
+  color: #2c241e;
+}
+
+.light-mode .subtitle {
+  color: #b45309;
+}
+
+.light-mode .description {
+  color: #5b4c42;
+}
+
+.light-mode .typewriter {
+  color: #4a3f36;
+  border-right: 2px solid #4a3f36;
+}
+
+.light-mode .icons a,
+.light-mode .icons button {
+  color: #4a3f36;
+}
+
+.light-mode .icons a:hover,
+.light-mode .icons button:hover {
+  color: #b45309;
+}
+
+.light-mode .location {
+  color: #3a2f27;
+}
+
+.light-mode .right img {
+  border: 1px solid #e6d8c8;
+  box-shadow: 0 15px 35px rgba(120, 72, 32, 0.08);
+}
+
+/* Experience Light */
+.light-mode .exp-card {
+  background: #ffffff;
+  border: 1px solid #e6d8c8;
+  box-shadow: 0 15px 35px rgba(120, 72, 32, 0.06);
+}
+
+.light-mode .exp-role {
+  color: #b45309;
+}
+
+.light-mode .exp-duration {
+  color: #7c6a5d;
+}
+
+.light-mode .exp-button {
+  color: #2c241e;
+  border: 1px solid #e6d8c8;
+}
+
+.light-mode .exp-button:hover {
+  background: #b45309;
+  color: white;
+}
+
+/* Projects Light */
+.light-mode .project-card {
+  background: #ffffff;
+  border: 1px solid #e8d5c4;
+  box-shadow: 0 15px 40px rgba(150, 90, 50, 0.08);
+}
+
+.light-mode .card-desc {
+  color: #5c4a3f;
+}
+
+.light-mode .tech-badge {
+  background: #f3e8dd;
+  color: #c2410c;
+}
+
+.light-mode .github {
+  border: 1px solid #e6d8c8;
+  color: #2c241e;
+}
+
+.light-mode .live {
+  background: #c2410c;
+}
+
+.light-mode .live:hover {
+  background: #9a3412;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    padding: 70px 20px;
+    gap: 40px;
+  }
+
+  .experience-section,
+  .projects-section {
+    padding: 70px 20px;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .right img {
+    width: 220px;
+  }
+
+  .typewriter {
+    white-space: normal;
+    width: 100%;
+    border-right: none;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .exp-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container,
+  .experience-section,
+  .projects-section {
+    padding: 60px 18px;
+  }
+
+  .right img {
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .typewriter {
+    font-size: 12px;
+  }
+
+  .icons {
+    gap: 14px;
+  }
+}
