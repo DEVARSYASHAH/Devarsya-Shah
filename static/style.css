@@ -122,7 +122,7 @@ body{
   font-size:14px;
   margin-bottom:24px;
   border-right:2px solid var(--text-muted);
-  white-space:nowrap;
+  white-space:normal;
   overflow:hidden;
   width:fit-content;
   animation:blink 1s infinite;
