@@ -4,7 +4,12 @@ from starlette.staticfiles import StaticFiles
 
 from data import experiences, projects, education, services
 
-app = FastHTML()
+app = FastHTML(
+    hdrs=(
+        Title("Devarsya Shah"),
+        Link(rel="icon", type="image/svg+xml", href="/static/favicon.svg"),
+    )
+)
 
 # ---------------- STATIC FILES ----------------
 
@@ -96,7 +101,7 @@ def home():
             Script(src="https://unpkg.com/lucide@latest"),
 
             # CSS (cache busting)
-            Link(rel="stylesheet", href="/static/style.css?v=1"),
+            Link(rel="stylesheet", href="/static/style.css?v=2"),
 
         ),
 
